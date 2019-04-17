@@ -1,4 +1,5 @@
 $(function(){
+	$('.user-info').hide();
 	var arr = [];
 
 	$.ajax({
@@ -6,7 +7,7 @@ $(function(){
 	  dataType: 'json',
 	  success: function(data) {
 	  	$('.loader-container').addClass('hidden');
-	  	$('.user-info').hide();
+	  	
 	  	const myObj = JSON.stringify(data.results);
 	  	arrData = JSON.parse(myObj);
 	    
